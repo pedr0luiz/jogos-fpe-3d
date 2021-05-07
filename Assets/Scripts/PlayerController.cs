@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
    GameObject playerCamera;
    float cameraRotation;
 
+   public Transform cam;
+
    CharacterController characterController;
 
    void Start()
@@ -33,13 +35,15 @@ public class PlayerController : MonoBehaviour
        if(!characterController.isGrounded){
            y = -_gravidade;
        }
-       
+
+//moveDirection = transform.TransformDirection(Vector3(x, y, z))*moveSpeed;
+
        Vector3 direction = new Vector3(x, y, z);
 
        cameraRotation += mouse_dY;
        Mathf.Clamp(cameraRotation, -75.0f, 75.0f);
        
-       characterController.Move(direction * _baseSpeed * Time.deltaTime);
+       characterController.Move(transform.TransformDirection(direction) * _baseSpeed * Time.deltaTime);
        transform.Rotate(Vector3.up, mouse_dX);
 
 
