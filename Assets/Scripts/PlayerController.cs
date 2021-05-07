@@ -6,11 +6,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
    float _baseSpeed = 10.0f;
-   float _gravidade = 9.8f;
+    public float jumpSpeed = 8.0F;
+    public float gravity = 20.0F;
    GameObject playerCamera;
    float cameraRotation;
+   private Vector3 moveDirection = Vector3.zero;
+   private int jumps = 0;
 
-   public Transform cam;
+   private float vibration = 0;
 
    CharacterController characterController;
 
@@ -29,21 +32,38 @@ public class PlayerController : MonoBehaviour
 
        float mouse_dX = Input.GetAxis("Mouse X");
        float mouse_dY = Input.GetAxis("Mouse Y")*-1;
-       
-       //Verificando se é preciso aplicar a gravidade
-       float y = 0;
-       if(!characterController.isGrounded){
-           y = -_gravidade;
+
+       if(Input.GetKey("left shift") && characterController.isGrounded){
+           mouse_dY += Mathf.Sin(vibration)/20;
+           _baseSpeed = 15.0f;
+           vibration += 0.1f;
+       } else{
+           vibration = 0.0f;
+           _baseSpeed = 10.0f;
        }
 
-//moveDirection = transform.TransformDirection(Vector3(x, y, z))*moveSpeed;
+        if (characterController.isGrounded) {
+            jumps = 0;
+            moveDirection = new Vector3(x, 0, z);
+            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection *= _baseSpeed;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && jumps < 2){
+            if(Input.GetKey("left shift") && characterController.isGrounded){
+                jumpSpeed = 12.0f;
+            } else{
+                jumpSpeed = 8.0f;
+            }
+            moveDirection.y = jumpSpeed;
+            jumps ++;
+        }
+        moveDirection.y -= gravity * Time.deltaTime;
+        characterController.Move(moveDirection * Time.deltaTime);
 
-       Vector3 direction = new Vector3(x, y, z);
 
        cameraRotation += mouse_dY;
        Mathf.Clamp(cameraRotation, -75.0f, 75.0f);
        
-       characterController.Move(transform.TransformDirection(direction) * _baseSpeed * Time.deltaTime);
        transform.Rotate(Vector3.up, mouse_dX);
 
 
