@@ -1,0 +1,387 @@
+fileFormatVersion: 2
+guid: c45e400fffdb57b44a36452ffdc086c4
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balkiai
+    second: {fileID: 2100000, guid: 1b3000ea540bf8547b58ee23165dc570, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ciaupo cromas
+    second: {fileID: 2100000, guid: 0f0e67fec4d400b47b29c86891f20251, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DefaultMaterial~1
+    second: {fileID: 2100000, guid: 2e1e7bd72143f054390ba46325545cd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kasos ekranas
+    second: {fileID: 2100000, guid: 44b7b5e2086426c4d8be32a817393db1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kasos korpusas
+    second: {fileID: 2100000, guid: 1a23b925aae0eaa4b8aff02f044103aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kriaukle
+    second: {fileID: 2100000, guid: 3db8093c93d45a843bc308b392903a3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lempos korpusas
+    second: {fileID: 2100000, guid: 8bf75b0f77543984ea00e6c6ef5ce525, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lempos vidus
+    second: {fileID: 2100000, guid: ed585400c120e77478f1a1a60fe91b79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Logo
+    second: {fileID: 2100000, guid: 53e176007b54e3d4688f208585f22fcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lubos
+    second: {fileID: 2100000, guid: 4c0ec00ee88bb7b45b7fc561c3d6ee86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meniu aliuminis
+    second: {fileID: 2100000, guid: eb1f713bf74ae104aba279aed3d7cf77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orkaites korpusas
+    second: {fileID: 2100000, guid: 862f3a4d3dc58ce47ba28613cfe43700, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orkaites rankena
+    second: {fileID: 2100000, guid: 8dbf680257ea2d04b946536f2d672f02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orkaites stiklas
+    second: {fileID: 2100000, guid: 043d2061f1b8e3f4393ac0bfaf97fbb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orkaites vidus
+    second: {fileID: 2100000, guid: c2fce1a1b34845a43911805fdd9f14b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parketas
+    second: {fileID: 2100000, guid: 65cd6234d407be54bba0a9b5d835236c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Peiliu magnetas
+    second: {fileID: 2100000, guid: 3a03ad61a092eab4790a2a4267a70cba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Peiliu plastikas
+    second: {fileID: 2100000, guid: e8b5d1cb9e052f041aaff1772537a17d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pica 2
+    second: {fileID: 2100000, guid: 6ef2525b577e85c4ea6b9946551bbd89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pica 3
+    second: {fileID: 2100000, guid: 5bb16a452910b354c94db7b9aaf07e51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Picos dezes logo
+    second: {fileID: 2100000, guid: a2c1429037316a74ebe9fede984aa7aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Picos korpusas
+    second: {fileID: 2100000, guid: 3b3412a2dcadac648b9f28994b82b7b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pitca 1
+    second: {fileID: 2100000, guid: 850f019357e24014d965bcae885c1187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pjaustykles aliuminis
+    second: {fileID: 2100000, guid: e8d40eb6b878adf42aa9fc6d3dad1329, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pjaustykles juoda
+    second: {fileID: 2100000, guid: f48f7eaaab5bd404e92d1d9472d93d9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pjaustykles pilka
+    second: {fileID: 2100000, guid: de691ef18cfccac429803efcc870af13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plyteles grindu
+    second: {fileID: 2100000, guid: 32de61da839b5fd429235dbb49659a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plytu siena
+    second: {fileID: 2100000, guid: 68209fcbcd1367c4ea4591c384cfc31f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Saldiklio salotu plastikas
+    second: {fileID: 2100000, guid: aa702964b42053141bb051a8c56efbfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sienos
+    second: {fileID: 2100000, guid: c2a061bf8052a004bb90186b65b14b39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stalo metalas
+    second: {fileID: 2100000, guid: 44af03ed663f14f468632328bd192e60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stalvirstis
+    second: {fileID: 2100000, guid: a54103ae66cf326469e301c64fb02cc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida dienine
+    second: {fileID: 2100000, guid: 9127f9d58952c4f4fa61bde29ca7ff1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine
+    second: {fileID: 2100000, guid: 6cb74064da9488e4c92e81e6f0b9018a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_10
+    second: {fileID: 2100000, guid: 30a79999bd8de8f409e4c87532164cfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_11
+    second: {fileID: 2100000, guid: f0ef5bb360d231544bad53f7c07efd0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_12
+    second: {fileID: 2100000, guid: ade68b8efe14d404392d59aac86a16e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_13
+    second: {fileID: 2100000, guid: c538055b3334c9941ad538c4b8d5e6ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_14
+    second: {fileID: 2100000, guid: 2841492dfc895ab4eb63773f517bbe50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_15
+    second: {fileID: 2100000, guid: 4b63635cde1dd9741b03217c3c02c7a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_16
+    second: {fileID: 2100000, guid: de9b808f8691b714082a1a79ffbf0e10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_17
+    second: {fileID: 2100000, guid: 11ded3a7fc44acb4ba7f3615acb37abf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_18
+    second: {fileID: 2100000, guid: 965e0e14ecdd2bc48a3213112d813455, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_19
+    second: {fileID: 2100000, guid: 32753e4b5c4735046a5dbeccf2c35c19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_2
+    second: {fileID: 2100000, guid: e2d962e493e2d514ba9fd56e008fc727, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_20
+    second: {fileID: 2100000, guid: 48b46030becba794b88660ef561bdd53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_21
+    second: {fileID: 2100000, guid: 7a33bba0e196a674589602a2e01d01ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_22
+    second: {fileID: 2100000, guid: f181aaf62ee804b458a9ddeabcc9c2e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_23
+    second: {fileID: 2100000, guid: 5d80e9da29d2fea49ad91716c30f64b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_24
+    second: {fileID: 2100000, guid: be0e90582c1ce0546a0ab826573fb4e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_25
+    second: {fileID: 2100000, guid: 54ad2d581f2dd924792f0e560d44e7b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_3
+    second: {fileID: 2100000, guid: ad7719442413be9419029512d1afb4cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_4
+    second: {fileID: 2100000, guid: c66c6f656410ca743be064f9b942a67a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_5
+    second: {fileID: 2100000, guid: 0a9d4da24c5a7e7448a21f799463a3eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_6
+    second: {fileID: 2100000, guid: d006a7e6123208644a9bbc6dae7df9f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_7
+    second: {fileID: 2100000, guid: f636e3d937d098a449a1baa071881747, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_8
+    second: {fileID: 2100000, guid: bb8f1df3875eb4249b6e33ab5bcc1cf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uzuolaida naktine_9
+    second: {fileID: 2100000, guid: c6a26f9a2949d50409b08f34b2598157, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
