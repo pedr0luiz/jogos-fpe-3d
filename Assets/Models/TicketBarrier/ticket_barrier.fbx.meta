@@ -6,7 +6,57 @@ ModelImporter:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: barrier
+    second: {fileID: 2100000, guid: 14a9d2269b0c6884e87733b6402e8700, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrome metal
+    second: {fileID: 2100000, guid: df7bc39d89dbb1d4f9ebad6e847168c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cwGlass-EEVEE
+    second: {fileID: 2100000, guid: 05d61e34c966ef84fbfffcb346c81498, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: first_
+    second: {fileID: 2100000, guid: 464c39cb79c124a489740c4c9d5c80c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal for screen
+    second: {fileID: 2100000, guid: 4672ad4bb39785347a2c97f6fd2d57fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rough metal
+    second: {fileID: 2100000, guid: 4957cb841ea85a24893397fc7306de05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rough plastic
+    second: {fileID: 2100000, guid: d303e7a3751d918498882d74f0d0bd0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen
+    second: {fileID: 2100000, guid: 79335467b93bb2743bb881c13bfe4033, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen.001
+    second: {fileID: 2100000, guid: d9ce87f09e340ac4c876f62dd6a59ced, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screen.002
+    second: {fileID: 2100000, guid: 89c28171a292520438b8664211b7350f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,7 +89,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
