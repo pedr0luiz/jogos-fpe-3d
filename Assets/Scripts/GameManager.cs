@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager {
     public bool player_won = false;
+    public bool has_knife = false;
 
 
     private static GameManager _instance;
@@ -22,6 +23,14 @@ public class GameManager {
     public void ResetGame() {
         player_won = false;
         SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void got_knife(){
+        has_knife = true;
+    }
+
+    public bool can_defuse(){
+        return has_knife;
     }
 
 }

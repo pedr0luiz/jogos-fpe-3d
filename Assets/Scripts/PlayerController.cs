@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -9,16 +10,21 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
    GameObject playerCamera;
+   GameManager gm;
    float cameraRotation;
    private Vector3 moveDirection = Vector3.zero;
    private int jumps = 0;
 
    private float vibration = 0;
+   public Text hint;
 
    CharacterController characterController;
 
    void Start()
    {
+        if (gm == null) {
+            gm = GameManager.GetInstance();
+        }
        characterController = GetComponent<CharacterController>();
        playerCamera = GameObject.Find("Main Camera");
        cameraRotation = 0.0f;
@@ -74,10 +80,21 @@ public class PlayerController : MonoBehaviour
 
     {
     RaycastHit hit;
-    //Debug.DrawRay(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), Color.magenta);
-    if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 100.0f))
+    if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 2.5f))
     {
-        //Debug.Log(hit.collider.name);
-    }
+        if(hit.collider.name == "TicketBarrier"){
+            hint.text = "Pressione F para pegar";
+        }
+        if(Input.GetKeyDown(KeyCode.F)){
+            switch(hit.collider.name){
+                case "Knife":
+                    Destroy(hit.collider.gameObject);
+                    gm.got_knife();
+                    break;
+            }
+        }
+    } else{
+            hint.text = "";
+        }
     }
 }
