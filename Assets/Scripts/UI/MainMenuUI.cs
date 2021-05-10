@@ -7,4 +7,12 @@ public class MainMenuUI : MonoBehaviour {
     public void play_game() {
         SceneManager.LoadScene("PlayScene");
     }
+
+    public void game_control_scene() {
+        SceneManager.LoadScene("ControlScene");
+    }
+
+    public void sound_control_scene() {
+        SceneManager.LoadScene("SoundControlScene");
+    }
 }
