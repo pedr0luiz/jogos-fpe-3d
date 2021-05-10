@@ -100,17 +100,26 @@ public class PlayerController : MonoBehaviour
     RaycastHit hit;
     if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 4.0f))
     {
-        if(hit.collider.name == "Pergaminho" || (hit.collider.name == "TicketBarrier" && gm.has_read_hint)){
+        if(hit.collider.name == "Pergaminho" || (hit.collider.name == "Faca" && gm.has_read_hint) || (hit.collider.name == "Multimetro" && gm.has_read_hint)){
             hint.text = "Pressione F para pegar " + hit.collider.name;
         }
         if(Input.GetKeyDown(KeyCode.F)){
             switch(hit.collider.name){
-                case "TicketBarrier":
+                case "Faca":
                     if(gm.has_read_hint){
                         _audiosource.Play();
                         Destroy(hit.collider.gameObject);
                         gm.got_knife();
                         inventario.text = "Faca: ✔";
+                        inventario.color = Color.green;
+                    }
+                    break;
+                case "Multimetro":
+                    if(gm.has_read_hint){
+                        _audiosource.Play();
+                        Destroy(hit.collider.gameObject);
+                        gm.got_knife();
+                        inventario.text = "Multimetro: ✔";
                         inventario.color = Color.green;
                     }
                     break;
