@@ -16,14 +16,9 @@ public class PlayerController : MonoBehaviour
     private int jumps = 0;
     private float vibration_time = 0.0f;
 
-<<<<<<< HEAD
-    private float vibration = 0;
-    public Text hint;
-=======
    private float vibration = 0;
    public Text hint;
    public Text inventario;
->>>>>>> d2690d88ea4a609fa0f1f70f787cf2b35aba556a
 
     public GameObject bombDefuseHint;
 
