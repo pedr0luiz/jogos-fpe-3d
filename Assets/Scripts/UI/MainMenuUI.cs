@@ -4,8 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour {
+    GameManager gm;
+
+        void Start()
+    {
+        if (gm == null) {
+            gm = GameManager.GetInstance();
+        }
+    }
     public void play_game() {
-        SceneManager.LoadScene("ContextPrePlayScene");
+        if(!gm.has_read_controlls){
+            gm.has_read_controlls = true;
+            SceneManager.LoadScene("ControlScene");
+        } else{
+            SceneManager.LoadScene("ContextPrePlayScene");
+        }
     }
 
     public void game_control_scene() {

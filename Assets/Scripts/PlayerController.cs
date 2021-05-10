@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private int jumps = 0;
     private float vibration_time = 0.0f;
-
+    private int seconds, minutes;
    private float vibration = 0;
+   private float timer = 0.0f;
    public Text hint;
-   public Text inventario;
+   public Text inventario, inv_mult, inv_radio, txt_timer;
 
     public GameObject bombDefuseHint;
 
@@ -43,6 +44,18 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             return;
         }
+
+        if(timer >= 59.0f){
+            minutes ++;
+            timer = 0.0f;
+            if(minutes >= 4){
+                Cursor.lockState = CursorLockMode.None;
+                gm.EndGame();
+            }
+        }
+        timer += Time.deltaTime;
+        
+        txt_timer.text = "0" + minutes.ToString() + ":" + (timer < 10.0f ? "0" : "") + timer.ToString("F0");
 
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -100,8 +113,11 @@ public class PlayerController : MonoBehaviour
     RaycastHit hit;
     if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 4.0f))
     {
-        if(hit.collider.name == "Pergaminho" || (hit.collider.name == "Faca" && gm.has_read_hint) || (hit.collider.name == "Multimetro" && gm.has_read_hint)){
+        if(hit.collider.name == "Pergaminho" || (hit.collider.name == "Faca" && gm.has_read_hint) || (hit.collider.name == "Multimetro" && gm.has_read_hint) || (hit.collider.name == "Radio" && gm.has_read_hint)){
             hint.text = "Pressione F para pegar " + hit.collider.name;
+        }
+        if(hit.collider.name == "Bomb" && gm.can_defuse()){
+            hint.text = "Pressione F para defusar a bomba";
         }
         if(Input.GetKeyDown(KeyCode.F)){
             switch(hit.collider.name){
@@ -118,16 +134,33 @@ public class PlayerController : MonoBehaviour
                     if(gm.has_read_hint){
                         _audiosource.Play();
                         Destroy(hit.collider.gameObject);
-                        gm.got_knife();
-                        inventario.text = "Multimetro: ✔";
-                        inventario.color = Color.green;
+                        gm.got_multimetro();
+                        inv_mult.text = "Multimetro: ✔";
+                        inv_mult.color = Color.green;
+                    }
+                    break;
+                case "Radio":
+                    if(gm.has_read_hint){
+                        _audiosource.Play();
+                        Destroy(hit.collider.gameObject);
+                        gm.got_radio();
+                        inv_radio.text = "Radio: ✔";
+                        inv_radio.color = Color.green;
                     }
                     break;
                 case "Pergaminho":
                     _audiosource.Play();
                     gm.set_bomb_hint(true);
                     inventario.text = "Faca: x";
+                    inv_mult.text = "Multimetro: x";
+                    inv_radio.text = "Radio: x";
                     bombDefuseHint.SetActive(true);
+                    break;
+                case "Bomb":
+                    _audiosource.Play();
+                    gm.player_won = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    gm.EndGame();
                     break;
             }
         }

@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameManager {
     public bool player_won = false;
     public bool has_knife = false;
+    public bool has_multimetro = false;
+    public bool has_radio = false;
     public bool game_paused = false;
 
     public bool bomb_hint_opened = false;
     public bool has_read_hint = false;
+
+    public bool has_read_controlls = false;
 
 
     private static GameManager _instance;
@@ -34,8 +38,16 @@ public class GameManager {
         has_knife = true;
     }
 
+    public void got_multimetro(){
+        has_multimetro = true;
+    }
+
+    public void got_radio(){
+        has_radio = true;
+    }
+
     public bool can_defuse(){
-        return has_knife;
+        return has_knife && has_multimetro && has_radio;
     }
 
     public void toogle_pause_game() {

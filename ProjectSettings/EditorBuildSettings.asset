@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ControlScene.unity
     guid: 7daa49b501e32db40a988cf45fdc6d9b
   - enabled: 1
-    path: Assets/ContextPrePlayScene.unity
+    path: Assets/Scenes/ContextPrePlayScene.unity
     guid: f10977e74e3d6fd48ad3e16c290d4aaf
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
