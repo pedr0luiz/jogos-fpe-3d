@@ -59,4 +59,13 @@ public class GameManager {
         bomb_hint_opened = state;
     }
 
+    public void reset(){
+        has_knife = false;
+        has_multimetro = false;
+        has_radio = false;
+        game_paused = false;
+        bomb_hint_opened = false;
+        has_read_hint = false;
+    }
+
 }

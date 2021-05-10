@@ -648,7 +648,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &138521441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56941,7 +56941,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Manual de como defusar uma bomba\n\nItens necess\xE1rios:\n- Faca\n- Mult\xEDmetro\n-
-    R\xE1dio\n\n\n\n\nPressione ESC para sair"
+    R\xE1dio\n\n\n\n\nPressione X para sair"
 --- !u!222 &1550763763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61681,8 +61681,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 25, y: 25, z: 25}
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!1001 &1729022875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61946,7 +61946,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 15, z: 25}
+  m_Size: {x: 80, y: 25, z: 35}
   m_Center: {x: 0, y: 10, z: 0}
 --- !u!1 &1811087763
 GameObject:
@@ -66588,8 +66588,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: -0.5, y: 0, z: 1}
 --- !u!1 &1864146792
 GameObject:
   m_ObjectHideFlags: 0
@@ -72068,8 +72068,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 5, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: -5}
 --- !u!1001 &1945275838
 PrefabInstance:
   m_ObjectHideFlags: 0

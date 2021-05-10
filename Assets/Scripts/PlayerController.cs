@@ -50,11 +50,13 @@ public class PlayerController : MonoBehaviour
             timer = 0.0f;
             if(minutes >= 4){
                 Cursor.lockState = CursorLockMode.None;
+                gm.player_won = false;
+                gm.reset();
                 gm.EndGame();
             }
         }
         timer += Time.deltaTime;
-        
+
         txt_timer.text = "0" + minutes.ToString() + ":" + (timer < 10.0f ? "0" : "") + timer.ToString("F0");
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -111,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     {
     RaycastHit hit;
-    if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 4.0f))
+    if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 6.0f))
     {
         if(hit.collider.name == "Pergaminho" || (hit.collider.name == "Faca" && gm.has_read_hint) || (hit.collider.name == "Multimetro" && gm.has_read_hint) || (hit.collider.name == "Radio" && gm.has_read_hint)){
             hint.text = "Pressione F para pegar " + hit.collider.name;
@@ -160,6 +162,7 @@ public class PlayerController : MonoBehaviour
                     _audiosource.Play();
                     gm.player_won = true;
                     Cursor.lockState = CursorLockMode.None;
+                    gm.reset();
                     gm.EndGame();
                     break;
             }
