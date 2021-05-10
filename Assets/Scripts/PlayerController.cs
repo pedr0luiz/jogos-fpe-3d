@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
    private float vibration = 0;
    public Text hint;
+   public Text inventario;
 
    public GameObject bombDefuseHint;
 
@@ -97,18 +98,22 @@ public class PlayerController : MonoBehaviour
     RaycastHit hit;
     if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 4.0f))
     {
-        print(hit.collider.name);
-        if(hit.collider.name == "Pergaminho"){
+        if(hit.collider.name == "Pergaminho" || (hit.collider.name == "TicketBarrier" && gm.has_read_hint)){
             hint.text = "Pressione F para pegar " + hit.collider.name;
         }
         if(Input.GetKeyDown(KeyCode.F)){
             switch(hit.collider.name){
-                case "Knife":
-                    Destroy(hit.collider.gameObject);
-                    gm.got_knife();
+                case "TicketBarrier":
+                    if(gm.has_read_hint){
+                        Destroy(hit.collider.gameObject);
+                        gm.got_knife();
+                        inventario.text = "Faca: ✔";
+                        inventario.color = Color.green;
+                    }
                     break;
                 case "Pergaminho":
                     gm.set_bomb_hint(true);
+                    inventario.text = "Faca: x";
                     bombDefuseHint.SetActive(true);
                     break;
             }

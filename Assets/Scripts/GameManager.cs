@@ -9,6 +9,7 @@ public class GameManager {
     public bool game_paused = false;
 
     public bool bomb_hint_opened = false;
+    public bool has_read_hint = false;
 
 
     private static GameManager _instance;
@@ -42,6 +43,7 @@ public class GameManager {
     }
 
     public void set_bomb_hint(bool state){
+        if(state) has_read_hint = true;
         bomb_hint_opened = state;
     }
 
