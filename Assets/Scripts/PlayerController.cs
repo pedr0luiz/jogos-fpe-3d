@@ -95,9 +95,10 @@ public class PlayerController : MonoBehaviour
 
     {
     RaycastHit hit;
-    if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 2.5f))
+    if(Physics.Raycast(playerCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition), out hit, 4.0f))
     {
-        if(hit.collider.name == "TicketBarrier"){
+        print(hit.collider.name);
+        if(hit.collider.name == "Pergaminho"){
             hint.text = "Pressione F para pegar " + hit.collider.name;
         }
         if(Input.GetKeyDown(KeyCode.F)){
@@ -106,7 +107,7 @@ public class PlayerController : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     gm.got_knife();
                     break;
-                case "TicketBarrier":
+                case "Pergaminho":
                     gm.set_bomb_hint(true);
                     bombDefuseHint.SetActive(true);
                     break;
