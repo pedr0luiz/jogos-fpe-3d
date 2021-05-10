@@ -8,6 +8,8 @@ public class GameManager {
     public bool has_knife = false;
     public bool game_paused = false;
 
+    public bool bomb_hint_opened = false;
+
 
     private static GameManager _instance;
     public static GameManager GetInstance() {
@@ -37,6 +39,10 @@ public class GameManager {
 
     public void toogle_pause_game() {
         game_paused = !game_paused;
+    }
+
+    public void set_bomb_hint(bool state){
+        bomb_hint_opened = state;
     }
 
 }
