@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager {
     public bool player_won = false;
     public bool has_knife = false;
+    public bool game_paused = false;
 
 
     private static GameManager _instance;
@@ -13,6 +14,7 @@ public class GameManager {
         if(_instance == null) {
             _instance = new GameManager();
         }
+
         return _instance;
     }
 
@@ -31,6 +33,10 @@ public class GameManager {
 
     public bool can_defuse(){
         return has_knife;
+    }
+
+    public void toogle_pause_game() {
+        game_paused = !game_paused;
     }
 
 }

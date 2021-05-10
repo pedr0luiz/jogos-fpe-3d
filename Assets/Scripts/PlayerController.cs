@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
    float cameraRotation;
    private Vector3 moveDirection = Vector3.zero;
    private int jumps = 0;
+   private float vibration_time = 0.0f;
 
    private float vibration = 0;
    public Text hint;
@@ -33,16 +34,28 @@ public class PlayerController : MonoBehaviour
 
    void Update()
    {
+       if (gm.game_paused){
+           Cursor.lockState = CursorLockMode.None;
+           return;
+       }
+
+       Cursor.lockState = CursorLockMode.Locked;
+
        float x = Input.GetAxis("Horizontal");
        float z = Input.GetAxis("Vertical");
 
        float mouse_dX = Input.GetAxis("Mouse X");
        float mouse_dY = Input.GetAxis("Mouse Y")*-1;
 
+       vibration_time += Time.deltaTime;
+
        if(Input.GetKey("left shift") && characterController.isGrounded){
-           mouse_dY += Mathf.Sin(vibration)/20;
            _baseSpeed = 15.0f;
-           vibration += 0.1f;
+           if(vibration_time > 0.005f){
+            mouse_dY += Mathf.Sin(vibration)/20;
+            vibration += 0.1f;  
+            vibration_time = 0.0f;
+           }
        } else{
            vibration = 0.0f;
            _baseSpeed = 10.0f;
